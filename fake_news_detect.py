@@ -76,7 +76,7 @@ if __name__ == "__main__":
         obj = NewsDetector()
         
         # testing news
-        print(obj.predict_news("Mamata Banerjee is the Chief Minister of West Bengal."))
+        print(obj.predict_news(""))
     
     # catching errors here
     except Exception as e:
