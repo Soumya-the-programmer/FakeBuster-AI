@@ -14,7 +14,7 @@ class NewsDetector:
     model = load(r"all_ensemble_model")
     
     # loading the vectorizer
-    vector = load(r"G:\My Drive\Fake News Model 2\vector.pkl")
+    vector = load(r"vector.pkl")
     
     # loading pre trained english language model
     nlp = nlp_load("en_core_web_sm")
