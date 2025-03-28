@@ -1,5 +1,4 @@
 "Importing necessary modules"
-import numpy as np
 import joblib
 import spacy
 
@@ -56,7 +55,7 @@ class NewsDetector:
         # testing if any error
         try:
             # calling the nlp function
-            text = np.array([self.nlp_apply(text)])
+            text = [self.nlp_apply(text)]
 
             # applying tfidf vectorizer
             text_tfidf_form = self.vector.transform(text)
