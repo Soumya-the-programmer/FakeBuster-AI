@@ -38,9 +38,23 @@ class FakeBusterAI:
         
         st.set_page_config(
             page_title="FakeBuster AI - Detect Fake News with AI",
-            page_icon="🛡️",  # Unicode emoji (or use "images/favicon.ico" for a custom icon)
+            page_icon="🛡️",
             layout="wide",
             initial_sidebar_state="collapsed"
+        )
+        
+        # 🛠️ Force Streamlit to expand width using CSS
+        st.markdown(
+            """
+            <style>
+                .main .block-container {
+                    max-width: 90% !important;  /* Adjust width */
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                }
+            </style>
+            """,
+            unsafe_allow_html=True
         )
 
 
