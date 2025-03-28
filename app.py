@@ -165,7 +165,7 @@ class FakeBusterAI:
         """, unsafe_allow_html=True)
 
 
-    def _corporate_header():
+    def _corporate_header(self):
         """
         Render an enterprise-level header for the app.
         - Displays the app title.
