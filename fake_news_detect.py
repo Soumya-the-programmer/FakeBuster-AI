@@ -1,7 +1,7 @@
 "Importing necessary modules"
-from numpy import array
-from joblib import load
-from spacy import load as nlp_load
+import numpy as np
+import joblib
+import spacy
 
 
 class NewsDetector:
@@ -11,13 +11,13 @@ class NewsDetector:
     """
     
     # loading the model
-    model = load(r"all_ensemble_model")
+    model = joblib.load(r"all_ensemble_model")
     
     # loading the vectorizer
-    vector = load(r"vector.pkl")
+    vector = joblib.load(r"vector.pkl")
     
     # loading pre trained english language model
-    nlp = nlp_load("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 
     def nlp_apply(self, text : str) -> str:
@@ -51,7 +51,7 @@ class NewsDetector:
         # testing if any error
         try:
             # calling the nlp function
-            text = array([self.nlp_apply(text)])
+            text = np.array([self.nlp_apply(text)])
 
             # applying tfidf vectorizer
             text_tfidf_form = self.vector.transform(text)
