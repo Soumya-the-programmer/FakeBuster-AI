@@ -38,23 +38,9 @@ class FakeBusterAI:
         
         st.set_page_config(
             page_title="FakeBuster AI - Detect Fake News with AI",
-            page_icon="🛡️",
+            page_icon="🛡️",  # Unicode emoji (or use "images/favicon.ico" for a custom icon)
             layout="wide",
             initial_sidebar_state="collapsed"
-        )
-        
-        # 🛠️ Force Streamlit to expand width using CSS
-        st.markdown(
-            """
-            <style>
-                .main .block-container {
-                    max-width: 100% !important;  /* Forces the page to full width */
-                    padding-left: 2rem; 
-                    padding-right: 2rem;
-                }
-            </style>
-            """,
-            unsafe_allow_html=True
         )
 
 
@@ -170,76 +156,59 @@ class FakeBusterAI:
         Render an enterprise-level header for the app.
         - Displays the app title.
         - Includes navigation links for a professional look.
-        - Ensures full-width responsive styling.
+        - Adapts for different screen sizes with responsive styling.
         """
-    
+        
         st.markdown("""
-            <style>
-                /* Ensuring full-width layout */
-                .main .block-container {
-                    max-width: 100% !important;
-                    padding-left: 2rem;
-                    padding-right: 2rem;
-                }
-    
-                /* Corporate Header */
+        <style>
+            .corporate-header {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .corporate-header h1 {
+                font-size: 2.8rem; /* Increased for better visibility */
+                white-space: nowrap;
+            }
+
+            .corporate-header .nav-links {
+                display: flex;
+                gap: 2rem;
+            }
+
+            @media (max-width: 768px) {
                 .corporate-header {
-                    max-width: 1200px;
-                    margin: 0 auto;
-                    padding: 20px 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
+                    flex-direction: column;
+                    text-align: center;
                 }
-    
+                
                 .corporate-header h1 {
-                    font-size: 2.5rem;
-                    font-weight: 700;
-                    margin: 0;
-                    color: white;
+                    font-size: 2.8rem; /* Bigger on mobile */
+                    margin-bottom: 10px;
                 }
-    
+                
                 .corporate-header .nav-links {
-                    display: flex;
-                    gap: 20px;
+                    gap: 1.5rem; /* Better spacing */
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    width: 100%;
                 }
-    
-                .corporate-header .nav-link {
-                    color: white;
-                    text-decoration: none;
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    transition: color 0.3s;
-                }
-    
-                .corporate-header .nav-link:hover {
-                    color: #FFD700;
-                }
-    
-                @media (max-width: 768px) {
-                    .corporate-header {
-                        flex-direction: column;
-                        text-align: center;
-                    }
-    
-                    .corporate-header .nav-links {
-                        flex-direction: column;
-                        gap: 10px;
-                        margin-top: 10px;
-                    }
-                }
-            </style>
-    
-            <div class="corporate-header">
-                <h1>FakeBuster AI</h1>
-                <div class="nav-links">
-                    <a href="?tab=analysis" class="nav-link">Analysis</a>
-                    <a href="?tab=about" class="nav-link">About Us</a>
-                </div>
+            }
+        </style>
+
+        <div class="corporate-header">
+            <h1 style="color: white; margin: 0; font-weight: 700;">FakeBuster AI</h1>
+            <div class="nav-links">
+                <a href="#text-analysis" class="nav-link" style="color: white; text-decoration: none;">Analysis</a>
+                <a href="#about-us" class="nav-link" style="color: white; text-decoration: none;">About Us</a>
             </div>
-        """, unsafe_allow_html=True)
-    
+        </div>
+    """, unsafe_allow_html=True)
+
 
     def _analysis_section(self):
         """
