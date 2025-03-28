@@ -2,7 +2,8 @@ streamlit
 joblib
 scikit-learn
 pandas
-numpy>=1.25
-spacy
-thinc<8.2.0
+numpy==1.24.3  # Avoids compatibility issues with Thinc
+spacy==3.7.2  # Explicit version for stability
+thinc==8.1.10  # Ensures compatibility with spaCy
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz#egg=en_core_web_sm
+
