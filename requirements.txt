@@ -1,11 +1,7 @@
-streamlit
-joblib
+numpy==1.23.5  # Specify stable version
 scikit-learn==1.2.2
-spacy==3.5.0
-thinc==8.1.0
-numpy==1.23.5
+spacy==3.7.2
+pandas==1.5.3
+streamlit==1.27.0
+joblib
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
-
-
-
-
