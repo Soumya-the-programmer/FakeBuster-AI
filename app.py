@@ -48,9 +48,9 @@ class FakeBusterAI:
             """
             <style>
                 .main .block-container {
-                    max-width: 90% !important;  /* Adjust width */
-                    padding-top: 1rem;
-                    padding-bottom: 1rem;
+                    max-width: 100% !important;  /* Forces the page to full width */
+                    padding-left: 2rem; 
+                    padding-right: 2rem;
                 }
             </style>
             """,
