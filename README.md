@@ -4,9 +4,39 @@ Welcome to **FakeBuster AI**, an advanced **Fake News Detection System** powered
 
 ---
 
-## 📸 Screenshots
+## 🚀 Project Overview  
+**FakeBuster AI** is an **NLP-powered web application** that detects **fake news** using an **ensemble machine learning model**.  
+It leverages **SVM, Naïve Bayes, Random Forest, Logistic Regression, and Decision Trees** for accurate predictions.  
+
+🔹 **Tech Stack:** Python, NLP, Machine Learning, Streamlit  
+🔹 **Algorithms Used:** SVM, Naïve Bayes, Random Forest, Logistic Regression, Decision Trees  
+🔹 **Deployment:** Streamlit 
 
 ---
+
+## 📸 Screenshots
+
+### 🔹 Home Page  
+![Home Page](https://github.com/user-attachments/assets/66332319-632b-400d-bc4e-f387d57c233e)  
+
+### 🔹 News Analysis Section  
+![Analysis Page](https://github.com/user-attachments/assets/dfef5365-ac34-45fc-a3c7-248463572d7c)  
+
+### 🔹 About Section  
+![About Page](https://github.com/user-attachments/assets/0dc1707f-532e-42f8-ae32-f998eb295bd0)  
+
+## ✅ Test Cases  
+Here are two test cases demonstrating the FakeBuster AI in action.  
+
+### **Test Case 1**  
+- **Input:** A piece of real news  
+- **Prediction:** ✅ **REAL NEWS**  
+![Test Case 1](https://github.com/user-attachments/assets/e1ac64a8-97dd-4654-b62d-25fd9b072a78)  
+
+### **Test Case 2**  
+- **Input:** A piece of fake news  
+- **Prediction:** ❌ **FAKE NEWS**  
+![Test Case 2](https://github.com/user-attachments/assets/9d15b72c-a12c-4c89-b85d-46e9e75f26b7)  
 
 ---
 
@@ -26,7 +56,7 @@ Welcome to **FakeBuster AI**, an advanced **Fake News Detection System** powered
 📁 FakeBuster_AI/
 │-- 📜 Model_Training.ipynb       # Jupyter Notebook for model training & evaluation
 │-- 📜 Processed_news.csv         # Preprocessed dataset
-│-- 📜 fake_and_real_news.csv     # Dataset after processing
+│-- 📜 fake_and_real_news.csv     # Original dataset
 │-- 📜 app.py                     # Main Streamlit UI application
 │-- 📜 fake_news_detect.py        # Helper functions for prediction
 │-- 📜 requirements.txt           # Dependencies list
@@ -42,7 +72,7 @@ We used the dataset from **Kaggle**:
 [News Detection: Fake or Real](https://www.kaggle.com/datasets/nitishjolly/news-detection-fake-or-real-dataset)
 
 - The dataset contains labeled news articles categorized as **Fake (0) or Real (1)**.
-- It was **preprocessed** (stopword removal, lemmatization, vectorization) and saved as `fake_and_real_news.csv`.
+- It was **preprocessed** (stopword removal, lemmatization, vectorization) and saved as `Processed_news.csv`.
 
 ---
 
