@@ -2,6 +2,8 @@
 
 Welcome to **FakeBuster AI**, an advanced **Fake News Detection System** powered by **Ensemble Machine Learning Models**. This project leverages multiple ML algorithms to accurately classify news articles as **Real or Fake**.
 
+🔗 **Live Website:** [FakeBuster AI](https://fakebusterai.streamlit.app)  
+
 ---
 
 ## 🚀 Project Overview  
